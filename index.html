@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trauma-Informed Research Script Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-heart"></i> Trauma-Informed Research Script Analyzer</h1>
+            <p class="subtitle">Transform your research scripts to create safer, more inclusive experiences for participants</p>
+            <div style="margin-top: 15px;">
+                <a href="test-samples.html" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                    <i class="fas fa-vials"></i> View Sample Scripts & Examples
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <h2>Upload Your Research Script</h2>
+                <textarea 
+                    id="scriptInput" 
+                    placeholder="Paste your research script here... The analyzer will review it against trauma-informed principles and suggest improvements."
+                    rows="12"></textarea>
+                <button id="analyzeBtn" class="analyze-btn">
+                    <i class="fas fa-search"></i> Analyze Script
+                </button>
+            </div>
+
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <h2>Analysis Results & Recommendations</h2>
+                
+                <div class="summary-card">
+                    <h3><i class="fas fa-chart-line"></i> Overall Assessment</h3>
+                    <div id="overallScore" class="score-display"></div>
+                    <div id="summaryText"></div>
+                </div>
+
+                <div class="principles-analysis">
+                    <h3><i class="fas fa-list-check"></i> Trauma-Informed Principles Analysis</h3>
+                    <div id="principlesGrid" class="principles-grid"></div>
+                </div>
+
+                <div class="suggestions-section">
+                    <h3><i class="fas fa-lightbulb"></i> Specific Recommendations</h3>
+                    <div id="suggestionsList" class="suggestions-list"></div>
+                </div>
+
+                <div class="improved-script">
+                    <h3><i class="fas fa-edit"></i> Improved Script Preview</h3>
+                    <div class="script-comparison">
+                        <div class="original-script">
+                            <h4>Original</h4>
+                            <div id="originalPreview" class="script-preview"></div>
+                        </div>
+                        <div class="improved-script-content">
+                            <h4>Trauma-Informed Version</h4>
+                            <div id="improvedPreview" class="script-preview"></div>
+                            <button id="copyImproved" class="copy-btn">
+                                <i class="fas fa-copy"></i> Copy Improved Script
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="principles-guide">
+                <h3><i class="fas fa-info-circle"></i> Trauma-Informed Principles</h3>
+                
+                <div class="principle-card">
+                    <h4><i class="fas fa-shield-alt"></i> Safety</h4>
+                    <p>Describe topics in advance, incorporate frequent check-ins, and create predictable structures.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h4><i class="fas fa-handshake"></i> Trust & Accountability</h4>
+                    <p>Be transparent about processes, follow through on commitments, and avoid overpromising.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h4><i class="fas fa-users"></i> Collaboration & Equity</h4>
+                    <p>Include marginalized voices, offer flexible participation methods, and ensure genuine partnership.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h4><i class="fas fa-hand-fist"></i> Empowerment</h4>
+                    <p>Provide meaningful choices, validate feelings, and avoid overwhelming participants.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h4><i class="fas fa-seedling"></i> Hope</h4>
+                    <p>Highlight positive impact, show how input matters, and focus on future benefits.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
