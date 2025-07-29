@@ -1,0 +1,113 @@
+# Email pattern matching and pre-approved responses configuration
+email_patterns:
+  - pattern_id: "general_inquiry"
+    keywords: ["information", "inquiry", "question", "help", "details"]
+    subject_keywords: ["inquiry", "question", "information"]
+    response_template: |
+      Thank you for your inquiry. We appreciate your interest in our services.
+      
+      I'll be happy to assist you with your request. To provide you with the most accurate information, 
+      could you please provide more specific details about what you're looking for?
+      
+      We typically respond to all inquiries within 24-48 hours.
+      
+      Best regards,
+      Customer Service Team
+
+  - pattern_id: "support_request"
+    keywords: ["support", "issue", "problem", "bug", "error", "not working", "broken"]
+    subject_keywords: ["support", "issue", "problem", "help"]
+    response_template: |
+      Thank you for contacting our support team.
+      
+      I understand you're experiencing an issue, and I want to help resolve this as quickly as possible.
+      
+      To better assist you, please provide:
+      1. A detailed description of the issue
+      2. Steps you've already tried
+      3. Any error messages you've received
+      
+      Our technical team will review your case and respond within 24 hours.
+      
+      Best regards,
+      Technical Support Team
+
+  - pattern_id: "pricing_inquiry"
+    keywords: ["price", "cost", "pricing", "quote", "estimate", "budget", "fee"]
+    subject_keywords: ["pricing", "quote", "cost", "price"]
+    response_template: |
+      Thank you for your interest in our pricing.
+      
+      We'd be happy to provide you with a customized quote based on your specific needs.
+      
+      To prepare an accurate estimate, please let us know:
+      1. The scope of services you're interested in
+      2. Your timeline requirements
+      3. Any specific requirements or preferences
+      
+      Our sales team will prepare a detailed proposal within 2 business days.
+      
+      Best regards,
+      Sales Team
+
+  - pattern_id: "appointment_request"
+    keywords: ["appointment", "meeting", "schedule", "calendar", "available", "book"]
+    subject_keywords: ["appointment", "meeting", "schedule"]
+    response_template: |
+      Thank you for requesting an appointment.
+      
+      I'd be happy to schedule a meeting with you. Our current availability includes:
+      - Monday through Friday, 9 AM to 5 PM
+      - Virtual or in-person meetings available
+      
+      Please let me know:
+      1. Your preferred date and time
+      2. Meeting preference (virtual/in-person)
+      3. The purpose of the meeting
+      
+      I'll send you a calendar invitation once we confirm the details.
+      
+      Best regards,
+      Scheduling Team
+
+  - pattern_id: "complaint_feedback"
+    keywords: ["complaint", "disappointed", "unsatisfied", "unhappy", "feedback", "concern"]
+    subject_keywords: ["complaint", "feedback", "concern", "issue"]
+    response_template: |
+      Thank you for bringing this to our attention.
+      
+      I sincerely apologize for any inconvenience you've experienced. Your feedback is valuable to us, 
+      and we take all concerns seriously.
+      
+      I would like to personally review your case and work toward a resolution. 
+      Please provide any additional details that might help me understand the situation better.
+      
+      I will follow up with you within 24 hours with next steps.
+      
+      Best regards,
+      Customer Relations Manager
+
+  - pattern_id: "partnership_inquiry"
+    keywords: ["partnership", "collaboration", "business", "vendor", "supplier", "partner"]
+    subject_keywords: ["partnership", "collaboration", "business opportunity"]
+    response_template: |
+      Thank you for your interest in partnering with us.
+      
+      We're always interested in exploring mutually beneficial business relationships.
+      
+      To better understand your proposal, please provide:
+      1. An overview of your organization
+      2. The type of partnership you're proposing
+      3. Expected benefits for both parties
+      
+      Our business development team will review your proposal and respond within 5 business days.
+      
+      Best regards,
+      Business Development Team
+
+# Configuration settings
+settings:
+  confidence_threshold: 0.6  # Minimum confidence score to auto-generate response
+  max_emails_per_batch: 10   # Maximum emails to process in one batch
+  check_interval_minutes: 30 # How often to check for new emails
+  draft_label: "Auto-Draft"  # Label to apply to auto-generated drafts
